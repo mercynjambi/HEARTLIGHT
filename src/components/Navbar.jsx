@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import logo from "../assets/workroomlogo.svg"
+
 import { BadgeCheck } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+
 
 
 const Navbar = () => {
@@ -13,11 +15,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <div className="flex items-center justify-center w-9 h-9">
-            {/* <img
-              src={logo}
-              alt="Workroom365 Logo"
-              className="w-full h-full object-contain"
-            /> */}
+           
           </div>
           <span className="text-lg font-display font-bold text-gray-900">
             HeartLight
@@ -28,25 +26,68 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-8 font-body text-sm font-medium text-gray-600">
-          <a href="/" className="hover:text-gray-900">
-            Home
-          </a>
-          <a href="about" className="hover:text-gray-900">
-            About Us
-          </a>
-          <a href="services" className="hover:text-gray-900">
-            Our Services 
-          </a>
-          <a href="plans" className="hover:text-gray-900">
-            Our Plans
-          </a>
-          <a href="team" className="hover:text-gray-900">
-            Our Team
-          </a>
-          <a href="contacts" className="hover:text-gray-900">
-            Contact Us
-          </a>
-        </nav>
+  <ScrollLink
+    to="hero"
+    smooth={true}
+    duration={600}
+    offset={-80}
+    className="hover:text-gray-900 cursor-pointer"
+  >
+    Home
+  </ScrollLink>
+
+  <ScrollLink
+    to="about"
+    smooth={true}
+    duration={600}
+    offset={-80}
+    className="hover:text-gray-900 cursor-pointer"
+  >
+    About Us
+  </ScrollLink>
+
+  <ScrollLink
+    to="services"
+    smooth={true}
+    duration={600}
+    offset={-80}
+    className="hover:text-gray-900 cursor-pointer"
+  >
+    Our Services
+  </ScrollLink>
+
+  <ScrollLink
+    to="plans"
+    smooth={true}
+    duration={600}
+    offset={-80}
+    className="hover:text-gray-900 cursor-pointer"
+  >
+    Our Plans
+  </ScrollLink>
+
+  <ScrollLink
+    to="team"
+    smooth={true}
+    duration={600}
+    offset={-80}
+    className="hover:text-gray-900 cursor-pointer"
+  >
+    Our Team
+  </ScrollLink>
+
+  <ScrollLink
+    to="contact"
+    smooth={true}
+    duration={600}
+    offset={-80}
+    className="hover:text-gray-900 cursor-pointer"
+  >
+    Contact Us
+  </ScrollLink>
+</nav>
+
+        
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-6 font-body">

@@ -7,7 +7,7 @@ function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <div className="absolute top-0 left-0 bg-primary text-white rounded-2xl p-8 shadow-lg z-10 -translate-y-8">
-              <div className="text-6xl font-bold  text-center text-secondary">7</div>
+              <div className="text-6xl font-bold  text-center text-secondary">2</div>
               <div className="text-2xl font-semibold text-secondary mt-2">Years</div>
               <div className="text-xl text-secondary mt-1">Experience</div>
             </div>
@@ -68,22 +68,22 @@ function About() {
 
             <div className="grid grid-cols-2 gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
-                <div className="text-5xl font-bold mb-2">10000 +</div>
+                <div className="text-5xl font-bold mb-2">1345 +</div>
                 <div className="text-secondary text-lg">Happy Clients</div>
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
-                <div className="text-5xl font-bold mb-2">1000 +</div>
+                <div className="text-5xl font-bold mb-2">21 +</div>
                 <div className="text-secondary text-lg">Paid Cover</div>
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
-                <div className="text-5xl font-bold mb-2">★★★★★</div>
+                <div className="text-3xl font-bold mb-2">★★★★★</div>
                 <div className="text-secondary text-lg">Customer Ratings</div>
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
-                <div className="text-5xl font-bold mb-2">Excellent</div>
+                <div className="text-3xl font-bold mb-2">Excellent</div>
                 <div className="text-secondary text-lg">Customer Feedback</div>
               </div>
             </div>

@@ -1,7 +1,7 @@
 const Team = () => {
   return (
-    <div className="flex flex-col items-center text-center mb-10">
-      <h1 className="text-4xl font-bold max-w-[740px] mb-[72px]">
+    <div className="flex flex-col items-center text-center mt-4 mb-8">
+      <h1 className="text-4xl font-bold max-w-[740px]  mt-[35px] mb-[72px]">
         Trusted by <span className="text-secondary">10,000+</span> families & communities
       </h1>
 
@@ -10,11 +10,7 @@ const Team = () => {
         {/* Member 1 */}
         <div className="flex flex-col items-center bg-white px-3 py-8 rounded-lg border border-gray-300/80 max-w-[272px] text-sm text-center text-gray-500">
           <div className="relative mb-4">
-            <img
-              className="h-16 w-16 rounded-full"
-              src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/userImage/userImage1.png"
-              alt="team-member-1"
-            />
+            
             <svg
               className="absolute top-0 -right-2"
               width="22"
@@ -44,11 +40,8 @@ const Team = () => {
         {/* Member 2 */}
         <div className="flex flex-col items-center bg-white px-3 py-8 rounded-lg border border-gray-300/80 max-w-[272px] text-sm text-center text-gray-500">
           <div className="relative mb-4">
-            <img
-              className="h-16 w-16 rounded-full"
-              src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/userImage/userImage2.png"
-              alt="team-member-2"
-            />
+            
+            
             <svg
               className="absolute top-0 -right-2"
               width="22"
@@ -78,11 +71,11 @@ const Team = () => {
         {/* Member 3 */}
         <div className="flex flex-col items-center bg-white px-3 py-8 rounded-lg border border-gray-300/80 max-w-[272px] text-sm text-center text-gray-500">
           <div className="relative mb-4">
-            <img
+            {/* <img
               className="h-16 w-16 rounded-full"
               src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/userImage/userImage3.png"
               alt="team-member-3"
-            />
+            /> */}
             <svg
               className="absolute top-0 -right-2"
               width="22"

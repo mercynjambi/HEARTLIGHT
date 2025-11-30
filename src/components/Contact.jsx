@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 import ContactForm from './ContactForm';
 import ContactInfo from './ContactInfo';
 
-const  Contact = () =>  {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,7 +16,7 @@ const  Contact = () =>  {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
@@ -35,28 +35,28 @@ const  Contact = () =>  {
     {
       icon: Mail,
       label: 'Email',
-      value: 'heartlight@gmail.com',
-      href: 'mailto:contact@company.com',
+      value: 'info@heartlightke.com',
+      href: 'mailto:heartlight@gmail.com',
     },
     {
       icon: Phone,
       label: 'Phone',
       value: '+254 727 426317',
-      href: 'tel:+15551234567',
+      href: 'tel:+254727426317',
     },
     {
       icon: MapPin,
       label: 'Address',
-      value: 'Nairobi, Kenya',
+      value: '32 Church View, Kenyatta Road',
       href: '#',
     },
   ];
 
   return (
-    <div className=" bg-gradient-to-br from-slate-50 to-slate-100 py-4 px-4 sm:px-64 lg:px-6">
+    <div className="bg-gradient-to-br from-slate-50 to-slate-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+        <div className="text-center mb-10">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
             Get in Touch
           </h1>
           <p className="text-lg text-gray-600">
@@ -64,7 +64,7 @@ const  Contact = () =>  {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <ContactInfo details={contactDetails} />
           <ContactForm
             formData={formData}
@@ -76,6 +76,6 @@ const  Contact = () =>  {
       </div>
     </div>
   );
-}
+};
 
 export default Contact;

@@ -1,21 +1,16 @@
-import React from 'react'
-import Navbar from './components/Navbar'
+import {  Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import RegistrationForm from "./components/RegistrationForm";
 
-import { Routes, Route} from 'react-router-dom'
-import Home from './Pages/Home.jsx'
-import './index.css'
-
-const App = () => {
+function App() {
   return (
-    <>
-    <Navbar />
-    <Routes>
-       <Route path="/" element={<Home/>} />
-    </Routes>
-   
-
-    </>
-  )
+    
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<RegistrationForm />} />
+      </Routes>
+    
+  );
 }
 
-export default App
+export default App;

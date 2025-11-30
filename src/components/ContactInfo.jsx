@@ -1,27 +1,35 @@
-const  ContactInfo = ({ details }) =>  {
+const ContactInfo = ({ details }) => {
   return (
-    <div className="flex flex-col justify-start bg-white rounded-2xl shadow-lg p-4 sm:p-6">
-      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
+    <div className="bg-white rounded-2xl shadow-lg p-6">
+      <h2 className="text-2xl font-bold text-gray-900 mb-5">
         Contact Information
       </h2>
 
       <div className="space-y-4">
         {details.map((detail, index) => {
           const Icon = detail.icon;
+
           return (
             <a
               key={index}
               href={detail.href}
-              className="flex items-start gap-4 group cursor-pointer"
+              className="flex items-center gap-3 group cursor-pointer"
             >
-              <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
-                <Icon className="w-6 h-6 text-secondary group-hover:text-white transition-colors duration-300" />
+              <div
+                className="flex-shrink-0 w-11 h-11 rounded-lg flex items-center justify-center transition-colors duration-300"
+                style={{ backgroundColor: '#566E6D' }}
+              >
+                <Icon className="w-5 h-5  bg-primary text-secondary" />
               </div>
+
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold text-gray-600 mb-1">
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
                   {detail.label}
                 </p>
-                <p className="text-base sm:text-lg font-medium text-gray-900 break-words group-hover:text-blue-600 transition-colors duration-300">
+                <p
+                  className="text-base font-medium text-gray-900 break-words transition-colors duration-300"
+                  style={{ color: '#566E6D' }}
+                >
                   {detail.value}
                 </p>
               </div>
@@ -30,13 +38,14 @@ const  ContactInfo = ({ details }) =>  {
         })}
       </div>
 
-      <div className="mt-6 pt-6 border-t border-gray-200">
+      <div className="mt-4 pt-4 border-t border-gray-200">
         <p className="text-gray-600 text-sm leading-relaxed">
-          We're available Monday through Friday, 9:00 AM to 6:00 PM. We'll do our best to respond to your inquiry within 24 hours.
+          We're available Monday through Friday, 9:00 AM to 6:00 PM.
+          We'll do our best to respond to your inquiry within 24 hours.
         </p>
       </div>
     </div>
   );
-}
+};
 
 export default ContactInfo;

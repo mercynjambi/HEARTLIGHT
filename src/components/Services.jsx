@@ -3,26 +3,26 @@ import { FileText, Shirt, Ambulance, Tent, Droplets } from 'lucide-react';
 
 function Services() {
   const services = [
-    {
-      icon: <div className=" text-secondary text-3xl">👑</div>,
-      title: 'Provision of executive coffin',
-      description: 'Purchasing the coffin',
-    },
-    {
-      icon: <Shirt className="w-8 h-8 text-secondary" />,
-      title: 'Dressing the body',
-      description: 'clothings',
-    },
+    // {
+    //   icon: <div className=" text-secondary text-3xl">👑</div>,
+    //   title: 'Provision of executive coffin',
+    //   description: 'Purchasing the coffin',
+    // },
+    // {
+    //   icon: <Shirt className="w-8 h-8 text-secondary" />,
+    //   title: 'Dressing the body',
+    //   description: 'clothings',
+    // },
     {
       icon: <FileText className="w-8 h-8 text-secondary" />,
       title: 'Payment of mortuary bill',
       description: 'For a maximum of 14 days',
     },
-    {
-      icon: <Ambulance className="w-8 h-8 text-secondary" />,
-      title: 'Transportation of the body',
-      description: '',
-    },
+    // {
+    //   icon: <Ambulance className="w-8 h-8 text-secondary" />,
+    //   title: 'Transportation of the body',
+    //   description: '',
+    // },
     {
       icon: <Tent className="w-8 h-8 text-secondary" />,
       title: 'Provision of burial gear',
