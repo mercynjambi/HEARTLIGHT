@@ -101,9 +101,9 @@ const  MemberInfoStep = ({ data, onChange, onNext })  => {
               required
             >
               <option value="">Tharaka Nithi</option>
-              <option value="kenya">Kenya</option>
-              <option value="uganda">Uganda</option>
-              <option value="tanzania">Tanzania</option>
+              <option value="kenya">Kiambu</option>
+              <option value="uganda">Murang'a</option>
+              <option value="tanzania">Kisumu</option>
             </select>
           </div>
 
@@ -220,7 +220,7 @@ const  MemberInfoStep = ({ data, onChange, onNext })  => {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="px-8 py-2 bg-primary text-secondary rounded-md hover:bg-cyan-600 transition-colors font-medium"
+            className="px-8 py-2 bg-primary text-secondary rounded-md hover:bg-primary transition-colors font-medium"
           >
             Next
           </button>

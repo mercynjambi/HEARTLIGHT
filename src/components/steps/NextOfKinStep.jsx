@@ -99,14 +99,14 @@ function NextOfKinStep({ data, onChange, onNext, onPrev }) {
           <button
             type="button"
             onClick={onPrev}
-            className="px-8 py-2 bg-cyan-500 text-white rounded-md hover:bg-cyan-600 transition-colors font-medium"
+            className="px-8 py-2 bg-primary text-secondary rounded-md hover:bg-primary transition-colors font-medium"
           >
             Prev
           </button>
 
           <button
             type="submit"
-            className="px-8 py-2  bg-primary text-secondary rounded-md hover:bg-cyan-600 transition-colors font-medium"
+            className="px-8 py-2  bg-primary text-secondary rounded-md hover:bg-primary transition-colors font-medium"
           >
             Next
           </button>

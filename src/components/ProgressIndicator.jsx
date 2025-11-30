@@ -9,8 +9,8 @@ function ProgressIndicator({ steps, currentStep }) {
                 step.number === currentStep
                   ? 'bg-primary text-white'
                   : step.number < currentStep
-                  ? 'bg-cyan-500 text-white'
-                  : 'bg-gray-300 text-gray-600'
+                  ? 'bg-primary text-white'
+                  : 'bg-primary text-white'
               }`}
             >
               {step.number}
@@ -18,10 +18,10 @@ function ProgressIndicator({ steps, currentStep }) {
             <span
               className={`text-xs mt-2 font-medium ${
                 step.number === currentStep
-                  ? 'text-cyan-500'
+                  ? 'text-secondary'
                   : step.number < currentStep
-                  ? 'text-cyan-500'
-                  : 'text-gray-400'
+                  ? 'text-secondary'
+                  : 'text-secondary'
               }`}
             >
               {step.label}
@@ -31,7 +31,7 @@ function ProgressIndicator({ steps, currentStep }) {
           {index < steps.length - 1 && (
             <div
               className={`w-24 h-0.5 mb-6 mx-2 transition-colors ${
-                step.number < currentStep ? 'bg-cyan-500' : 'bg-gray-300'
+                step.number < currentStep ? 'bg-primary' : 'bg-gray-300'
               }`}
             />
           )}

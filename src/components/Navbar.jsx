@@ -91,14 +91,13 @@ const Navbar = () => {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-6 font-body">
-          
-          <a
-            href="#"
-            className="rounded-full bg-primary text-white px-5 py-2 text-sm font-semibold hover:bg-pink-600 transition-colors"
-          >
-            Register
-          </a>
-        </div>
+  <Link
+    to="/register"
+    className="rounded-full bg-primary text-white px-5 py-2 text-sm font-semibold hover:bg-primary transition-colors"
+  >
+    Register
+  </Link>
+</div>
 
         {/* Mobile Hamburger */}
         <button

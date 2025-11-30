@@ -4,6 +4,7 @@ import DependentsStep from './steps/DependentsStep';
 import NextOfKinStep from './steps/NextOfKinStep';
 import DeclarationStep from './steps/DeclarationStep';
 import ProgressIndicator from './ProgressIndicator';
+import Navbar from './Navbar';
 
 function RegistrationForm() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -66,7 +67,8 @@ function RegistrationForm() {
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-5xl mx-auto px-4">
+      <Navbar />
+      <div className="max-w-5xl mt-12 mx-auto px-4">
         <ProgressIndicator steps={steps} currentStep={currentStep} />
 
         <div className="bg-white rounded-lg shadow-sm p-8 mt-8">
