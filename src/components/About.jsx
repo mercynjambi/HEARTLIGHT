@@ -24,15 +24,12 @@ function About() {
               Secure Your Family's <span className='text-4xl md:text-5xl text-secondary font-bold text-gray-900 mb-6 leading-tight'>Financial Future</span>
             </h1>
             <p className="text-2xl text-gray-600 mb-6">
-              Join our comprehensive welfare fund program with flexible plans , easy claims processing and relatable support when you need it most. 
+              Join our comprehensive welfare fund program with flexible plans, easy claims processing and reliable support when you need it most. We work together with our members to enable them access financial support and a decent send off for their loved ones.
             </p>
 
             
 
-            <p className=" text-2xl text-gray-600 mt-8 ">
-              {/* leading-relaxed */}
-              We work together with members to enable them access financial support and decent send off to their loved ones when bereaved regardless of their financial challenges
-            </p>
+            
           </div>
         </div>
       </section>
