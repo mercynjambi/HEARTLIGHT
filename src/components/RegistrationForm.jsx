@@ -66,7 +66,7 @@ function RegistrationForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-gray-50 py-8 pt-20">
       <Navbar />
       <div className="max-w-5xl mt-12 mx-auto px-4">
         <ProgressIndicator steps={steps} currentStep={currentStep} />

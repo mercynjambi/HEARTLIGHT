@@ -1,6 +1,38 @@
-const  MemberInfoStep = ({ data, onChange, onNext })  => {
+import { useState, useEffect } from "react";
+
+const MemberInfoStep = ({ data, onChange, onNext }) => {
+  const [displayDOB, setDisplayDOB] = useState("");
+
   const handleChange = (field, value) => {
     onChange({ ...data, [field]: value });
+  };
+
+  // Keep displayDOB in sync with data.dateOfBirth
+  useEffect(() => {
+    if (data.dateOfBirth) {
+      const date = new Date(data.dateOfBirth);
+      const formatted = `${String(date.getDate()).padStart(2, "0")}/${String(
+        date.getMonth() + 1
+      ).padStart(2, "0")}/${date.getFullYear()}`;
+      setDisplayDOB(formatted);
+    } else {
+      setDisplayDOB("");
+    }
+  }, [data.dateOfBirth]);
+
+  const handleDOBChange = (value) => {
+    setDisplayDOB(value);
+
+    const parts = value.split("/");
+    if (parts.length === 3) {
+      const isoDate = `${parts[2]}-${parts[1].padStart(2, "0")}-${parts[0].padStart(
+        2,
+        "0"
+      )}`;
+      handleChange("dateOfBirth", isoDate);
+    } else {
+      handleChange("dateOfBirth", "");
+    }
   };
 
   const handleSubmit = (e) => {
@@ -32,7 +64,7 @@ const  MemberInfoStep = ({ data, onChange, onNext })  => {
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Middle Name <span className="text-red-500">*</span>
+              Middle Name
             </label>
             <input
               type="text"
@@ -40,13 +72,12 @@ const  MemberInfoStep = ({ data, onChange, onNext })  => {
               onChange={(e) => handleChange("middleName", e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Middle Name"
-              required
             />
           </div>
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Last Name
+              Last Name <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
@@ -54,6 +85,7 @@ const  MemberInfoStep = ({ data, onChange, onNext })  => {
               onChange={(e) => handleChange("lastName", e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Last Name"
+              required
             />
           </div>
         </div>
@@ -101,9 +133,9 @@ const  MemberInfoStep = ({ data, onChange, onNext })  => {
               required
             >
               <option value="">Tharaka Nithi</option>
-              <option value="kenya">Kiambu</option>
-              <option value="uganda">Murang'a</option>
-              <option value="tanzania">Kisumu</option>
+              <option value="kiambu">Kiambu</option>
+              <option value="muranga">Murang'a</option>
+              <option value="kisumu">Kisumu</option>
             </select>
           </div>
 
@@ -136,17 +168,16 @@ const  MemberInfoStep = ({ data, onChange, onNext })  => {
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white"
             required
           >
-            <option value="">
-              Couples, Children and Parents (91–100 Yrs) – KES 500
+            <option value="bronze">
+              Bronze – Kes 500 (Sum Assured: Kes 70,000)
             </option>
-            <option value="category1">
-              Couples, Children and Parents (91–100 Yrs) – KES 500
+
+            <option value="silver">
+              Silver – Kes 1,800 (Sum Assured: Kes 100,000)
             </option>
-            <option value="category2">
-              Individual (21–50 Yrs) – KES 300
-            </option>
-            <option value="category3">
-              Senior Citizens (51–90 Yrs) – KES 400
+
+            <option value="platinum">
+              Platinum – Kes 2,400 (Sum Assured: Kes 200,000)
             </option>
           </select>
         </div>
@@ -176,9 +207,10 @@ const  MemberInfoStep = ({ data, onChange, onNext })  => {
               Date of Birth <span className="text-red-500">*</span>
             </label>
             <input
-              type="date"
-              value={data.dateOfBirth}
-              onChange={(e) => handleChange("dateOfBirth", e.target.value)}
+              type="text"
+              value={displayDOB}
+              onChange={(e) => handleDOBChange(e.target.value)}
+              placeholder="dd/mm/yyyy"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               required
             />
@@ -228,6 +260,6 @@ const  MemberInfoStep = ({ data, onChange, onNext })  => {
       </div>
     </form>
   );
-}
+};
 
 export default MemberInfoStep;

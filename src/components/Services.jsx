@@ -1,28 +1,13 @@
 import ServiceCard from './ServiceCard';
-import { FileText, Shirt, Ambulance, Tent, Droplets } from 'lucide-react';
+import { FileText, Tent, Droplets } from 'lucide-react';
 
 function Services() {
   const services = [
-    // {
-    //   icon: <div className=" text-secondary text-3xl">👑</div>,
-    //   title: 'Provision of executive coffin',
-    //   description: 'Purchasing the coffin',
-    // },
-    // {
-    //   icon: <Shirt className="w-8 h-8 text-secondary" />,
-    //   title: 'Dressing the body',
-    //   description: 'clothings',
-    // },
     {
       icon: <FileText className="w-8 h-8 text-secondary" />,
       title: 'Payment of mortuary bill',
       description: 'For a maximum of 14 days',
     },
-    // {
-    //   icon: <Ambulance className="w-8 h-8 text-secondary" />,
-    //   title: 'Transportation of the body',
-    //   description: '',
-    // },
     {
       icon: <Tent className="w-8 h-8 text-secondary" />,
       title: 'Provision of burial gear',
@@ -36,9 +21,9 @@ function Services() {
   ];
 
   return (
-    <div className="min-h-screen bg-white py-16 px-4">
+    <div className="bg-white py-8 px-4">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
           We Provide professional
           <br />
           welfare Services

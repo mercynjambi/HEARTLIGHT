@@ -1,4 +1,5 @@
 import { FileText, Shield } from 'lucide-react';
+import peter from '../assets/peter.jpg';
 
 function About() {
   return (
@@ -12,7 +13,7 @@ function About() {
               <div className="text-xl text-secondary mt-1">Experience</div>
             </div>
             <img
-              src="https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src={peter}
               alt="Hands together in support"
               className="rounded-2xl shadow-xl w-full object-cover h-[500px]"
             />
@@ -20,34 +21,17 @@ function About() {
 
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              We support our members financially during unforeseen eventualities
+              Secure Your Family's <span className='text-4xl md:text-5xl text-secondary font-bold text-gray-900 mb-6 leading-tight'>Financial Future</span>
             </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Tujipange Companion is a registered Welfare Association which provides last expense cover to its members
+            <p className="text-lg text-gray-600 mb-6">
+              We extend our compassionate care and practical support to every individual and family grieving the loss of a loved one, no one walks through grief alone. Our services are open to all who need a helping hand during one of life’s most difficult journeys
             </p>
 
-            <div className="grid grid-cols-2 gap-8">
-              <div className="flex items-start gap-4">
-                <div className="bg-blue-50 p-3 rounded-lg">
-                  <FileText className="w-8 h-8 text-secondary" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-1">Flexible cover Plans</h3>
-                </div>
-              </div>
+            
 
-              <div className="flex items-start gap-4">
-                <div className="bg-blue-50 p-3 rounded-lg">
-                  <Shield className="w-8 h-8 text-secondary" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-1">Transparency and accountability</h3>
-                </div>
-              </div>
-            </div>
-
-            <p className="text-gray-600 mt-8 leading-relaxed">
-              we work together with members to enable them access financial support and decent send off to their loved ones when bereaved regardless of their financial challenges
+            <p className=" text-lg text-gray-600 mt-8 ">
+              {/* leading-relaxed */}
+              We work together with members to enable them access financial support and decent send off to their loved ones when bereaved regardless of their financial challenges
             </p>
           </div>
         </div>
