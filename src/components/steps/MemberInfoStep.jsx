@@ -1,39 +1,15 @@
 import { useState, useEffect } from "react";
+import { counties } from "../../data/counties"; 
+
 
 const MemberInfoStep = ({ data, onChange, onNext }) => {
-  const [displayDOB, setDisplayDOB] = useState("");
+  
 
   const handleChange = (field, value) => {
     onChange({ ...data, [field]: value });
   };
 
-  // Keep displayDOB in sync with data.dateOfBirth
-  useEffect(() => {
-    if (data.dateOfBirth) {
-      const date = new Date(data.dateOfBirth);
-      const formatted = `${String(date.getDate()).padStart(2, "0")}/${String(
-        date.getMonth() + 1
-      ).padStart(2, "0")}/${date.getFullYear()}`;
-      setDisplayDOB(formatted);
-    } else {
-      setDisplayDOB("");
-    }
-  }, [data.dateOfBirth]);
-
-  const handleDOBChange = (value) => {
-    setDisplayDOB(value);
-
-    const parts = value.split("/");
-    if (parts.length === 3) {
-      const isoDate = `${parts[2]}-${parts[1].padStart(2, "0")}-${parts[0].padStart(
-        2,
-        "0"
-      )}`;
-      handleChange("dateOfBirth", isoDate);
-    } else {
-      handleChange("dateOfBirth", "");
-    }
-  };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -120,24 +96,29 @@ const MemberInfoStep = ({ data, onChange, onNext }) => {
           </div>
         </div>
 
-        {/* Country + Gender */}
+        {/* County + Gender */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Select county <span className="text-red-500">*</span>
-            </label>
-            <select
+                  Select county <span className="text-red-500">*</span>
+                </label>
+                <select
               value={data.country}
               onChange={(e) => handleChange("country", e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white"
               required
             >
-              <option value="">Tharaka Nithi</option>
-              <option value="kiambu">Kiambu</option>
-              <option value="muranga">Murang'a</option>
-              <option value="kisumu">Kisumu</option>
+              <option value="">Select County</option>
+
+              {counties.map((county) => (
+                <option key={county} value={county.toLowerCase()}>
+                  {county}
+                </option>
+              ))}
             </select>
-          </div>
+            </div>
+
+         
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -202,19 +183,18 @@ const MemberInfoStep = ({ data, onChange, onNext }) => {
             </select>
           </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Date of Birth <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              value={displayDOB}
-              onChange={(e) => handleDOBChange(e.target.value)}
-              placeholder="dd/mm/yyyy"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              required
-            />
-          </div>
+                  <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Date of Birth <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="date" // <- use "date" to enable calendar
+            value={data.dateOfBirth || ""}
+            onChange={(e) => handleChange("dateOfBirth", e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            required
+          />
+        </div>
         </div>
 
         {/* Phone numbers */}

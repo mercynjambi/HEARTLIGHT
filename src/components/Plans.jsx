@@ -100,7 +100,7 @@ const Plans = () => {
       {/* BENEFITS SECTION */}
       <section className="py-20 px-4 bg-stone-100">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-6">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
               Why Choose Our Welfare Fund?
             </h2>
@@ -144,6 +144,28 @@ const Plans = () => {
           </div>
         </div>
       </section>
+
+
+      <section className="py-8 bg-stone-100">
+  <div className="max-w-5xl mx-auto text-center px-4">
+    <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+      Yearly Subscription
+    </h2>
+
+    <div className="bg-white p-8 rounded-xl shadow-md text-xl md:text-2xl font-medium text-gray-700">
+      <p className="mb-4">
+        <span className="font-bold text-[var(--color-primary)]">Bronze:</span> Kes 5,400/year
+      </p>
+      <p className="mb-4">
+        <span className="font-bold text-[var(--color-primary)]">Silver:</span> Kes 21,000/year
+      </p>
+      <p>
+        <span className="font-bold text-[var(--color-primary)]">Platinum:</span> Kes 27,600/year
+      </p>
+    </div>
+  </div>
+</section>
+
 
     </div>
   );

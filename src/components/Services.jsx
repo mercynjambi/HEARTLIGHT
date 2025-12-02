@@ -6,7 +6,7 @@ function Services() {
     {
       icon: <FileText className="w-8 h-8 text-secondary" />,
       title: 'Payment of mortuary bill',
-      description: 'For a maximum of 14 days',
+      description: 'For a maximum of 10 days',
     },
     {
       icon: <Tent className="w-8 h-8 text-secondary" />,

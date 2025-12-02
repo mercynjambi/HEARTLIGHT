@@ -20,16 +20,16 @@ function About() {
           </div>
 
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-5xl md:text65xl font-bold text-gray-900 mb-6 leading-tight">
               Secure Your Family's <span className='text-4xl md:text-5xl text-secondary font-bold text-gray-900 mb-6 leading-tight'>Financial Future</span>
             </h1>
-            <p className="text-lg text-gray-600 mb-6">
-              We extend our compassionate care and practical support to every individual and family grieving the loss of a loved one, no one walks through grief alone. Our services are open to all who need a helping hand during one of life’s most difficult journeys
+            <p className="text-2xl text-gray-600 mb-6">
+              Join our comprehensive welfare fund program with flexible plans , easy claims processing and relatable support when you need it most. 
             </p>
 
             
 
-            <p className=" text-lg text-gray-600 mt-8 ">
+            <p className=" text-2xl text-gray-600 mt-8 ">
               {/* leading-relaxed */}
               We work together with members to enable them access financial support and decent send off to their loved ones when bereaved regardless of their financial challenges
             </p>
@@ -43,7 +43,7 @@ function About() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">Who we cover?</h2>
               <p className="text-lg leading-relaxed mb-8 text-blue-50">
-                Our funeral expenses cover is designed to include everyone, ensuring that no one is left behind in their time of need. We provide compassionate and comprehensive support for all families, regardless of background. Your peace of mind is our commitment, and we are here for you every step of the way.
+               We extend our compassionate care and practical support to every individual and family grieving the loss of a loved one, no one walks through grief alone. Our services are open to all who need a helping hand during one of life’s most difficult journeys
               </p>
               <button className="bg-black/10 hover:bg-cyan-300 text-secondary font-semibold px-8 py-3 rounded-lg transition-colors duration-200">
                 More Details

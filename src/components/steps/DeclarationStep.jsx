@@ -3,6 +3,11 @@ function DeclarationStep({ data, onChange, onPrev, onSubmit }) {
     onChange({ ...data, [field]: value });
   };
 
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    handleChange("idCard", file); // store the file object in data
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit();
@@ -16,11 +21,10 @@ function DeclarationStep({ data, onChange, onPrev, onSubmit }) {
         <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
           <li>Go To Mpesa</li>
           <li>Go To Lipa Na Mpesa</li>
-          <li>Paybill</li>
-          <li>Business Number: 4123313</li>
-          <li>Account No: your national ID</li>
-          <li>Amount: ksh 200</li>
-          <li>Enter mpesa code below and click submit</li>
+          <li>Buy Goods & Services</li>
+          <li>Till Number: 83291110</li>
+          <li>Amount: ksh 500</li>
+          <li>Enter Mpesa code below and click submit</li>
         </ul>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -31,7 +35,7 @@ function DeclarationStep({ data, onChange, onPrev, onSubmit }) {
             <input
               type="text"
               value={data.mpesaCode}
-              onChange={(e) => handleChange('mpesaCode', e.target.value)}
+              onChange={(e) => handleChange("mpesaCode", e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Mpesa Code"
               required
@@ -45,11 +49,30 @@ function DeclarationStep({ data, onChange, onPrev, onSubmit }) {
             <input
               type="text"
               value={data.referredBy}
-              onChange={(e) => handleChange('referredBy', e.target.value)}
+              onChange={(e) => handleChange("referredBy", e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Member Number"
             />
           </div>
+        </div>
+
+        {/* ID Card Upload */}
+        <div className="mb-6">
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Upload ID Card <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="file"
+            accept=".jpg,.jpeg,.png,.pdf"
+            onChange={handleFileChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            required
+          />
+          {data.idCard && (
+            <p className="text-sm text-gray-600 mt-2">
+              Selected file: {data.idCard.name}
+            </p>
+          )}
         </div>
 
         <div className="mb-6">
@@ -62,7 +85,7 @@ function DeclarationStep({ data, onChange, onPrev, onSubmit }) {
               type="checkbox"
               id="agree"
               checked={data.agreed}
-              onChange={(e) => handleChange('agreed', e.target.checked)}
+              onChange={(e) => handleChange("agreed", e.target.checked)}
               className="w-4 h-4 text-cyan-500 border-gray-300 rounded focus:ring-cyan-500"
               required
             />
