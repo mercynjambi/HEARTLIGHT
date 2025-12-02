@@ -229,6 +229,31 @@ const MemberInfoStep = ({ data, onChange, onNext }) => {
           </div>
         </div>
 
+        {/* Upload ID Card */}
+<div className="mb-6">
+  <label className="block text-sm font-medium text-gray-700 mb-2">
+    Upload ID Card <span className="text-red-500">*</span>
+  </label>
+
+  <input
+    type="file"
+    accept=".jpg,.jpeg,.png,.pdf"
+    onChange={(e) => handleChange("idCard", e.target.files[0])}
+    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white"
+    required
+  />
+
+  {/* Show filename after selecting */}
+  {data.idCard && (
+    <p className="text-sm text-gray-600 mt-2">
+      Selected file: {data.idCard.name}
+    </p>
+  )}
+</div>
+
+
+        
+
         <div className="flex justify-center">
           <button
             type="submit"

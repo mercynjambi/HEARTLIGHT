@@ -23,7 +23,7 @@ function DeclarationStep({ data, onChange, onPrev, onSubmit }) {
           <li>Go To Lipa Na Mpesa</li>
           <li>Buy Goods & Services</li>
           <li>Till Number: 83291110</li>
-          <li>Amount: ksh 500</li>
+          <li>Amount: ksh 500 registration fee (non-refundable) + chosen plan (bronze, silver, platinum)</li>
           <li>Enter Mpesa code below and click submit</li>
         </ul>
 
@@ -56,7 +56,7 @@ function DeclarationStep({ data, onChange, onPrev, onSubmit }) {
           </div>
         </div>
 
-        {/* ID Card Upload */}
+        {/* ID Card Upload
         <div className="mb-6">
           <label className="block text-sm font-medium text-gray-700 mb-2">
             Upload ID Card <span className="text-red-500">*</span>
@@ -73,7 +73,7 @@ function DeclarationStep({ data, onChange, onPrev, onSubmit }) {
               Selected file: {data.idCard.name}
             </p>
           )}
-        </div>
+        </div> */}
 
         <div className="mb-6">
           <p className="text-gray-700 text-sm mb-3">
